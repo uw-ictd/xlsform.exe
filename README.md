@@ -5,7 +5,7 @@ Using XLSForm.exe:
 ------------------
 1. Download the zip [here](https://github.com/downloads/nathanathan/xlsform.exe/XLSForm.zip).
 2. Extract it somewhere.
-3. Drag an XLSForm onto XLSForm.exe. A corresponding xform will appear in the output directory.
+3. Drag an XLSForm onto xlsform.exe. A corresponding xform will appear in the output directory.
 
 Problems:
 ---------
