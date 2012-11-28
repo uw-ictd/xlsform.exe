@@ -1,23 +1,21 @@
-If possible use the online XLSForm converter or formhub.
-XLSForm.exe won't work on all Windows systems, it doesn't run the output xml through ODK Validate,
-and it won't be updated as frequently.
+If possible use the online [XLSForm converter](http://opendatakit.org/use/xlsform/).
+XLSForm.exe won't work on all Windows systems, it doesn't run the output xml through ODK Validate, and it won't be updated as frequently as the online version.
 
-Running:
---------
-Download the zip [here](http://www.google.com).
-Extract it.
-To convert XLSForms drag them onto XLSForm.exe, an xform with the same name will appear.
-
+Running it:
+-----------
+1. Download the zip [here](https://github.com/downloads/nathanathan/xlsform.exe/XLSForm.zip).
+2. Extract it somewhere.
+3. Drag an XLSForm onto XLSForm.exe. A corresponding xform will appear in the output directory.
 
 Problems:
 ---------
 
 There might be some missing libraries that I didn't package with the exe.
 
-If you can I suggest just using the python script directory.
+If you are familiar with Python one work around would be to run [the XLSForm code](https://github.com/UW-ICTD/pyxform) directly.
 
-Building:
----------
+Building the exe:
+-----------------
 
 python setup.py py2exe
 
@@ -30,12 +28,16 @@ http://www.python.org/download/releases/2.6.6/
 
 http://pypi.python.org/pypi/setuptools
 
+```Shell
 set PYTHONPATH=%PYTHONPATH%;C:\Python26\
 set PATH=%PATH%;C:\Python26\
 set PATH=%PATH%;C:\Python26\Scripts
+```
 
+```
 easy_install pip
 pip install xlrd
+```
 
 
 lxml might also be needed. I had to use the windows installer for that here:
