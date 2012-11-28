@@ -7,6 +7,29 @@ Using XLSForm.exe:
 2. Extract it somewhere.
 3. Drag an XLSForm onto xlsform.exe. A corresponding xform will appear in the output directory.
 
+
+
+
+
+
+
+
+
+
+
+
+
+___________________________________
+
+
+
+
+
+
+
+
+
+
 Problems:
 ---------
 
