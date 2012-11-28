@@ -1,8 +1,8 @@
 If possible use the online [XLSForm converter](http://opendatakit.org/use/xlsform/).
 XLSForm.exe won't work on all Windows systems, it doesn't run the output xml through ODK Validate, and it won't be updated as frequently as the online version.
 
-Running it:
------------
+Using XLSForm.exe:
+------------------
 1. Download the zip [here](https://github.com/downloads/nathanathan/xlsform.exe/XLSForm.zip).
 2. Extract it somewhere.
 3. Drag an XLSForm onto XLSForm.exe. A corresponding xform will appear in the output directory.
