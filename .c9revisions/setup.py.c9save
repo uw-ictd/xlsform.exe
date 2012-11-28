@@ -1,0 +1,3 @@
+{"ts":1354058682103,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1354058912655,"patch":[[{"diffs":[[1,"from distutils.core import setup\r\nimport py2exe\r\n\r\nsetup(console=['xls2xform.py'])\r\n"]],"start1":0,"start2":0,"length1":0,"length2":84}]],"length":84,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1354060677596,"patch":[[{"diffs":[[0,"'xls"],[-1,"2x"],[0,"form"]],"start1":66,"start2":66,"length1":10,"length2":8}]],"length":82,"saved":false}
