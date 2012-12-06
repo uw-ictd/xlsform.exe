@@ -33,7 +33,7 @@ ___________________________________
 Problems:
 ---------
 
-There might be some missing libraries that I didn't package with the exe.
+Some systems might be missing the Microsoft Visual C runtime DLL [and it is not bundled with the exe](http://www.py2exe.org/index.cgi/Tutorial#A5.ProvidingtheMicrosoftVisualCruntimeDLL).
 
 If you are familiar with Python one work around would be to run [the XLSForm code](https://github.com/UW-ICTD/pyxform) directly.
 
