@@ -3,31 +3,11 @@ XLSForm.exe won't work on all Windows systems, it doesn't run the output xml thr
 
 Using XLSForm.exe:
 ------------------
-1. Download the zip [here](https://github.com/downloads/nathanathan/xlsform.exe/XLSForm.zip).
+1. Download the zip [here](http://opendatakit.googlecode.com/files/xlsform.zip).
 2. Extract it somewhere.
 3. Drag an XLSForm onto xlsform.exe. A corresponding xform will appear in the output directory.
 
-
-
-
-
-
-
-
-
-
-
-
-
 ___________________________________
-
-
-
-
-
-
-
-
 
 
 Problems:
