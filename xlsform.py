@@ -4,23 +4,7 @@ The xform will appear in an output folder in the same directory as this exe.
 """
 import os, sys
 import pyxform
-from pyxform.utils import sheet_to_csv
-
-def has_external_choices(json_struct):
-    """
-    Returns true if a select one external prompt is used in the survey.
-    """
-    if isinstance(json_struct, dict):
-        for k,v in json_struct.items():
-            if k == u"type" and v.startswith(u"select one external"):
-                return True
-            elif has_external_choices(v):
-                return True
-    elif isinstance(json_struct, list):
-        for v in json_struct:
-            if has_external_choices(v):
-                return True
-    return False
+from pyxform.utils import sheet_to_csv, has_external_choices
 
 if __name__ == '__main__':
     try:
