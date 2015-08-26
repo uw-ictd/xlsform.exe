@@ -1,4 +1,5 @@
 from distutils.core import setup
-import py2exe
+import sys, py2exe
+sys.path.append('./pyxform')
 
 setup(console=['xlsform.py'])

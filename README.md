@@ -20,38 +20,99 @@ If you are familiar with Python one work around would be to run [the XLSForm cod
 Setting up Python on Windows:
 -----------------------------
 
-http://www.python.org/download/releases/2.6.6/
-(Python version is very important. Ealier versions have unicode kwarg bug, later versions don't work with py2exe)
+Install Python 2.7
 
-[Install setup-tools](http://pypi.python.org/pypi/setuptools)
+This has been updated to use Python 2.7 (now built with 2.7.3)
+
+Add Scripts directory to PATH
+-----------------------------
+
+You only need to do this for the instructions below. Open a CMD window and execute:
 
 ```Shell
-set PYTHONPATH=%PYTHONPATH%;C:\Python26\
-set PATH=%PATH%;C:\Python26\
-set PATH=%PATH%;C:\Python26\Scripts
+set PATH=%PATH%;C:\Python27\Scripts
 ```
+
+Install pip
+-------------------------------
+
+On Windows, [Install setup-tools](https://pypi.python.org/pypi/setuptools#windows-simplified) and use `easy_install pip`
+On Linux, you can use python-pip package.
+
+InsecurePlatformWarning
+------------------------------
+To avoid this warning you likely need to install [PyOpenSSL](https://urllib3.readthedocs.org/en/latest/security.html#pyopenssl)
+
+```
+pip install urllib3 pyopenssl ndg-httpsclient pyasn1
+python
+import urllib3.contrib.pyopenssl
+urllib3.contrib.pyopenssl.inject_into_urllib3()
+exit()
+```
+
+Install misc libraries
+------------------------------
+
+In the CMD window, run:
 
 ```
 easy_install pip
-pip install xlrd
+pip install xlrd lxml
 ```
 
-lxml might also be needed. Use the windows installer for that here:
-http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml
+Download and install elementtree
+------------------------------
+Download these at:
+[elementtree](https://pypi.python.org/pypi/elementtree/1.2.6-20050316)
 
-Install [py2exe](http://sourceforge.net/projects/py2exe/files/py2exe/0.6.9/)
+unzip and run
+```
+python setup.py install
+```
+in the unzipped directory
+
+Install py2exe
+------------------------------
+
+Install [py2exe](http://www.py2exe.org/)
+
+Download and install the 32-bit version (0.6.9)
 
 Building the exe:
 -----------------
 
 1. Download the pyxform source and add the nested pyxform folder to this project's root.
 
-2. In this projects root directory `python setup.py py2exe`
+2. Delete the .git repo within that directory.
 
-3. Create an `output` directory within the `dist` directory.
+3. In this projects root directory `python setup.py py2exe`
 
-4. Rename the `dist` directory to `xlsform`.
+4. Create an `output` directory within the `dist` directory.
 
-5. Right-click on `xlsform`, choose Send To / Compressed (zipped) folder.  
+5. Rename the `dist` directory to `xlsform`.
+
+6. Right-click on `xlsform`, choose Send To / Compressed (zipped) folder.  
 
 The resulting zip file is equivalent to the zip available on the opendatakit.org downloads page
+
+NOTE: at the end of the build of the dist directory, you will get this (expected) summary:
+
+```
+copying C:\Python27\lib\site-packages\py2exe\run.exe -> D:\workspace\xlsform_exe\dist\xlsform.exe
+The following modules appear to be missing
+['ElementC14N', '_scproxy', 'cElementTree', 'odk_validate.check_xform']
+
+*** binary dependencies ***
+Your executable(s) also depend on these dlls which are not included,
+you may or may not need to distribute them.
+
+Make sure you have the license if you distribute any of them, and
+make sure you don't distribute files belonging to the operating system.
+
+   WS2_32.dll - C:\WINDOWS\system32\WS2_32.dll
+   SHELL32.dll - C:\WINDOWS\system32\SHELL32.dll
+   USER32.dll - C:\WINDOWS\system32\USER32.dll
+   ADVAPI32.dll - C:\WINDOWS\system32\ADVAPI32.dll
+   KERNEL32.dll - C:\WINDOWS\system32\KERNEL32.dll
+```
